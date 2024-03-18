@@ -14,7 +14,7 @@ JsonEditor::JsonEditor(QWidget *parent)
 
     m_ =  QVariant(QVariantMap());
 
-    QVariantMap jsonDiscMap = JsonTplLoader::loadFromFile("/Users/leo/projects/QtProjects/JsonEditor/example.json").toVariantMap();
+    QVariantMap jsonDiscMap = JsonTplLoader::loadFromFile(":/example.json").toVariantMap();
     ui->treeView->setData(jsonDiscMap, m_);
 
     connect(ui->treeView,&TreeWidget::sigDataChanged,[=]{
